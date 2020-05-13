@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 import IOD from "./IOD";
 
 export default function Photos(){
     const[photo, setPhoto] = useState([]);
-    
     useEffect(() => {
         axios
             .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
